@@ -8,10 +8,10 @@
 
 WiFiManager wifiManager;
 WiFiManagerParameter custom_text_port("<br>What is the SMTP port? (Gmail = 465)");
-WiFiManagerParameter our_smtp_port("port", "smtp port", "", 5);
+WiFiManagerParameter our_smtp_port("port", "smtp port", "465", 5);
 
 WiFiManagerParameter custom_text_server("<br><br>What is the SMTP server?<br>(Gmail = smtp.gmail.com)");
-WiFiManagerParameter our_smtp_server("server", "smtp server", "", 40);
+WiFiManagerParameter our_smtp_server("server", "smtp server", "smtp.gmail.com", 40);
 
 WiFiManagerParameter custom_text_email("<br><br>What is your email address?<br>(johndoe@gmail.com)");
 WiFiManagerParameter our_email("email", "smtp email", "", 40);
