@@ -92,21 +92,21 @@ After you've entered your config info, and set up your Gmail account for SMTP ac
 
 This initializes the AlertMe library after import. "alert" can be any word you want, as long as it's reflected in the rest of your code.
 
-**alert.connect**(bool **debug_wifi** = false);
+void **alert.connect**(bool **debug_wifi** = false);
 
 When called, the underlying WiFiManager code first checks to see if there's a saved WiFi network to continue connecting to. If it can't, your ESP8266 will reconfigure as a hotspot named "AlertMe Configuration" and prompt you to enter your WiFi/SMTP credentials. (Once connected, visit http://192.168.4.1 in your browser to do this)
 
-After a WiFi connection is established, AlertMe makes a test authorization with your email provider over SMTP. If it can't connect or authorize, AlertMe falls back to hosting the configuration hotspot again until this step is successful.
+After a WiFi connection is established, AlertMe makes a test authorization with your email provider over SMTP. If it can't connect or authorize, AlertMe falls back to hosting the configuration hotspot again until this step is successful. **debug_wifi** can be enabled to see WiFiManager information output to Serial.
 
-**alert.send**(String **subject_line**, String **message**, String **destination**);
+const char* **alert.send**(String **subject_line**, String **message**, String **destination**);
 
-*This is where the magic happens.* This function sends an Email/SMS of **subject_line**/**message** to **destination**!
+*This is where the magic happens.* This function sends an Email/SMS of **subject_line**/**message** to **destination**! If successful, the word "SENT" is returned. If not, an error message from SMTP is returned, such as "Could not connect to mail server".
 
-**alert.debug**(bool **enabled**);
+void **alert.debug**(bool **enabled**);
 
 When enabled, SMTP and filesystem debug information will be sent over Serial.
 
-**alert.config**();
+void **alert.config**();
 
 Allows you to call up the config hotspot at all, a good practice would be adding this at the top of your setup() function:
 
@@ -114,4 +114,10 @@ Allows you to call up the config hotspot at all, a good practice would be adding
         alert.config();
     }
 
-**alert.reset**(bool **duration**);
+void **alert.reset**(bool **format** == false);
+
+Used to reset WiFi configuration, and delete saved SMTP credentials from the ESP8266. Good for if you're giving this microcontroller to someone else!
+
+const char* **alert.get_error**();
+
+Used to get the last SMTP error encountered, such as if you just used an alert.send() destined for an invalid email address.
