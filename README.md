@@ -10,12 +10,51 @@ With AlertMe, your ESP8266 project can:
 - Send Email through the provider of your choice via SMTP! (\**Only Gmail tested so far*)
 - Send SMS through your cell phone carrier's SMS-to-Email portal! (Over 200 worldwide carriers support this)
 
-Here's a quick example, which will automatically reconfigure as a configuration hotspot if it can't connect to a saved network/server:
+# Demo
+
+**Here's a quick example, which will automatically reconfigure as a configuration hotspot if it can't connect to a saved network/server:**
 
     #include "AlertMe.h"
     AlertMe alert;
     void setup() {
       alert.connect();
-      alert.send("AlertMe Demo, "This is an email demonstrating the AlertMe library!", "johndoe@gmail.com");
+      alert.send("AlertMe Demo", "This is an email demonstrating the AlertMe library!", "johndoe@gmail.com");
     }
     void loop(){}
+
+This would send an email with your subject line "AlertMe Demo", with the contents you specify, to johndoe@gmail.com! Simple as that.
+
+# Reliable & Secure
+
+No need to worry about reliance on any extra services but your email provider. If you're pairing this with Gmail, you can pretty well guarantee 100% uptime through them. As far as security goes, the data is sent over HTTPS/SSL to the SMTP server of your choice, which is encrypted as WPA2 traffic on your network, and stored quite securely with any name-brand email service!
+
+**HOWEVER**, The credentials you input for WiFi and SMTP are stored away inside the ESP8266's filesystem, which could be read back if your ESP8266 is stolen by a stranger *who just-so-happens to know* how to access the SPIFFS filesystem on this type of microcontroller *and* knows that the credentials are in base64. Highly unlikely, but a possiblity. Be safe! Your smartphone being stolen is a much more likely and threatening scenario than this.
+
+# Free SMS Capability
+
+Most cell carriers are including unlimited text nowadays due to the focus being on data plans, so if you have a smartphone with a data plan, odds are that unlimited texts are already included in the cost! This is done through an Email-to-SMS portal provided by your carrier. For example:
+
+| Phone Number | Carrier | SMS Portal                         |
+|--------------|---------|------------------------------------|
+| 555-123-4567 | Verizon | 5551234567@vtext.com               |
+| 123-456-7890 | AT&T    | 1234567890@txt.att.net             |
+| 555-555-5555 | Sprint  | 5555555555@messaging.sprintpcs.com |
+
+These special email addresses forward the mail recieved to the specified phone number! A list of over 200 supported worldwide carriers can be found here: https://martinfitzpatrick.name/list-of-email-to-sms-gateways/
+
+# Email Configuration
+
+To send Email or SMS, you'll need to get SMTP access with your email provider. A quick Google search for "[Provider] SMTP port" will usually get you what you need. There's too many to cover here, so I'll go over Gmail usage:
+
+SMTP Port: 465
+SMTP Server: smtp.gmail.com
+SMTP Email: **your Gmail address**
+SMTP Password **your Gmail password**
+
+**ALMOST DONE!**
+
+These are the four inputs you need to enter on the AlertMe configuration hotspot, but you're not quite done yet. To allow your Gmail account to accept SMTP connections from your ESP8266, follow the steps of this instruction guide: https://support.google.com/accounts/answer/6010255
+
+After you've entered your config info, and set up your Gmail account for SMTP access, be sure to reboot your ESP8266 and check that the configuration is saved!
+
+***TIP**: place **alert.debug(true)** above **alert.connect()** and watch the Serial monitor for connection reports!*
