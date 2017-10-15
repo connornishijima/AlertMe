@@ -69,9 +69,9 @@ Don't use this for spam. *Don't you do it.*
 
 ~~**With Arduino Library Manager:**~~ **Coming soon!**
 
-~~1. Open *Sketch > Include Library > Manage Libraries* in the Arduino IDE.~~
-~~2. Search for "Volume", (look for "Connor Nishijima") and select the latest version.~~
-~~3. Click the Install button and Arduino will prepare the library and examples for you!~~
+~~1. Open *Sketch > Include Library > Manage Libraries* in the Arduino IDE.~~  
+~~2. Search for "Volume", (look for "Connor Nishijima") and select the latest version.~~  
+~~3. Click the Install button and Arduino will prepare the library and examples for you!~~  
 
 **Manual Install:**
 
