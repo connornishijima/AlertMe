@@ -13,7 +13,7 @@ With AlertMe, your ESP8266 project can:
 ----------
 # Contents
 - [Usage](#usage)
-- [Reliability & Security](#reliability-and-security)
+- [Reliability and Security](#reliability-and-security)
 - [Free SMS Capability](#free-sms-capability)
 - [Disclaimer](#disclaimer)
 - [Installation](#installation)
