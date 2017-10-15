@@ -11,7 +11,18 @@ With AlertMe, your ESP8266 project can:
 - Send SMS through your cell phone carrier's SMS-to-Email portal! (Over 200 worldwide carriers support this)
 
 ----------
-# Demo
+# Contents
+- [Usage](#usage)
+- [Reliability & Security](#reliability-and-security)
+- [Free SMS Capability](#free-sms-capability)
+- [Installation](#installation)
+- [Dependencies](#dependencies)
+- [Email Configuration](#email-configuration)
+- [Functions](#functions)
+- [Contributing](#contributing)
+- [License and credits](#license-and-credits)
+----------
+# Usage
 
 **Here's a quick example, which will automatically reconfigure as a configuration hotspot if it can't connect to a saved network/server:**
 
@@ -25,7 +36,7 @@ With AlertMe, your ESP8266 project can:
 
 This would send an email with your subject line "AlertMe Demo", with the contents you specify, to johndoe@gmail.com! Simple as that.
 
-# Reliable & Secure
+# Reliablity and Security
 
 No need to worry about reliance on any extra services but your email provider. If you're pairing this with Gmail, you can pretty well guarantee 100% uptime through them. As far as security goes, the data is sent over HTTPS/SSL to the SMTP server of your choice, which is encrypted as WPA2 traffic on your network, and stored quite securely with any name-brand email service!
 
@@ -63,6 +74,8 @@ https://martinfitzpatrick.name/list-of-email-to-sms-gateways/
 
 ----------
 # Dependencies
+
+You'll need these two libraries already installed for AlertMe to work:
 
 - **Arduino JSON**: https://github.com/bblanchon/ArduinoJson
 - **WiFiManager**: https://github.com/tzapu/WiFiManager
@@ -121,3 +134,17 @@ Used to reset WiFi configuration, and delete saved SMTP credentials from the ESP
 const char* **alert.get_error**();
 
 Used to get the last SMTP error encountered, such as if you just used an alert.send() destined for an invalid email address.
+
+----------
+# Contributing
+Any advice or pull requests are welcome. :)
+
+----------
+# License and Credits
+**Developed for free by Connor Nishijima (2017)**
+
+**AlertMe includes modified code from these sources:**  
+Borya's Gmail Sender: http://www.instructables.com/id/ESP8266-GMail-Sender/
+Adam Rudd's arduino-base64: https://github.com/adamvr/arduino-base64
+
+**Released under the [GPLv3 license](http://www.gnu.org/licenses/gpl-3.0.en.html).**
