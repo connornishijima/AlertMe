@@ -1,0 +1,25 @@
+###################################
+# Syntax Coloring Map for AlertMe
+###################################
+
+###################################
+# Datatypes (KEYWORD1)
+###################################
+
+AlertMe	KEYWORD1
+
+###################################
+# Methods and Functions (KEYWORD2)
+###################################
+
+alert	KEYWORD2
+connect	KEYWORD2
+send	KEYWORD2
+get_error	KEYWORD2
+debug	KEYWORD2
+config	KEYWORD2
+reset	KEYWORD2
+
+###################################
+# Constants (LITERAL1)
+###################################
