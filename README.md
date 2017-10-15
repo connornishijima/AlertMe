@@ -141,7 +141,7 @@ Any advice or pull requests are welcome. :)
 
 ----------
 # License and Credits
-**Developed for free by Connor Nishijima (2017)**
+**Developed for free by Connor Nishijima in response to a [proprietary cash-grab](https://www.tindie.com/products/pixeltwenty/add-text-and-email-alerts-to-anything/)**
 
 **AlertMe includes modified code from these sources:**  
 Borya's Gmail Sender: http://www.instructables.com/id/ESP8266-GMail-Sender/
