@@ -10,6 +10,7 @@ With AlertMe, your ESP8266 project can:
 - Send Email through the provider of your choice via SMTP! (\**Only Gmail tested so far*)
 - Send SMS through your cell phone carrier's SMS-to-Email portal! (Over 200 worldwide carriers support this)
 
+----------
 # Demo
 
 **Here's a quick example, which will automatically reconfigure as a configuration hotspot if it can't connect to a saved network/server:**
@@ -45,6 +46,28 @@ These special email addresses forward the mail recieved to the specified phone n
 **A list of over 200 supported worldwide carriers can be found at the bottom of this page:**  
 https://martinfitzpatrick.name/list-of-email-to-sms-gateways/
 
+----------
+# Installation
+
+~~**With Arduino Library Manager:**~~ **Coming soon!**
+
+~~1. Open *Sketch > Include Library > Manage Libraries* in the Arduino IDE.~~
+~~2. Search for "Volume", (look for "Connor Nishijima") and select the latest version.~~
+~~3. Click the Install button and Arduino will prepare the library and examples for you!~~
+
+**Manual Install:**
+
+1. Click "Clone or Download" above to get an "AlertMe-master.zip" file.
+2. Extract it's contents to the libraries folder in your sketchbook.
+3. Rename the folder from "AlertMe-master" to just "AlertMe".
+
+----------
+# Dependencies
+
+- **Arduino JSON**: https://github.com/bblanchon/ArduinoJson
+- **WiFiManager**: https://github.com/tzapu/WiFiManager
+
+----------
 # Email Configuration
 
 To send Email or SMS, you'll need to get SMTP access with your email provider. A quick Google search for "[Provider] SMTP port" will usually get you what you need. There's too many to cover here, so I'll go over Gmail usage:
@@ -61,3 +84,28 @@ These are the four inputs you need to enter on the AlertMe configuration hotspot
 After you've entered your config info, and set up your Gmail account for SMTP access, be sure to reboot your ESP8266 and check that the configuration is saved!
 
 ***TIP**: place **alert.debug(true)** above **alert.connect()** and watch the Serial monitor for connection reports!*
+
+----------
+# Functions
+
+**AlertMe alert**;
+
+This initializes the AlertMe library after import. "alert" can be any word you want, as long as it's reflected in the rest of your code.
+
+**alert.send**(String **subject_line**, String **message**, String **destination**);
+
+*This is where the magic happens.* This function sends an Email/SMS of **subject_line**/**message** to **destination**!
+
+**alert.debug**(bool **enabled**);
+
+When enabled, SMTP and filesystem debug information will be sent over Serial.
+
+**alert.config**();
+
+Allows you to call up the config hotspot at all, a good practice would be adding this at the top of your setup() function:
+
+    if(digitalRead(config_pin) == LOW){
+        alert.config();
+    }
+
+**alert.reset**(bool **duration**);
