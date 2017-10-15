@@ -1,4 +1,3 @@
 ![#AlertMe Library](https://i.imgur.com/TiQ5zEf.jpg)
 
-# AlertMe
-Arduino library for sending email and SMS from nothing but the ESP8266!
+**Did you know your ESP8266 could send Email and SMS without any extra hardware or paid services like Twilio?**
