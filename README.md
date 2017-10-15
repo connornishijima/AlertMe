@@ -141,10 +141,10 @@ Any advice or pull requests are welcome. :)
 
 ----------
 # License and Credits
-**Developed for free by Connor Nishijima in response to a [proprietary cash-grab](https://www.tindie.com/products/pixeltwenty/add-text-and-email-alerts-to-anything/)**
+**Developed for free by Connor Nishijima in response to [cheap proprietary greed](https://www.tindie.com/products/pixeltwenty/add-text-and-email-alerts-to-anything/)**
 
 **AlertMe includes modified code from these sources:**  
-Borya's Gmail Sender: http://www.instructables.com/id/ESP8266-GMail-Sender/
+Borya's Gmail Sender: http://www.instructables.com/id/ESP8266-GMail-Sender/  
 Adam Rudd's arduino-base64: https://github.com/adamvr/arduino-base64
 
 **Released under the [GPLv3 license](http://www.gnu.org/licenses/gpl-3.0.en.html).**
