@@ -41,7 +41,9 @@ This would send an email with your subject line "AlertMe Demo", with the content
 
 No need to worry about reliance on any extra services but your email provider. If you're pairing this with Gmail, you can pretty well guarantee 100% uptime through them. As far as security goes, the data is sent over HTTPS/SSL to the SMTP server of your choice, which is encrypted as WPA2 traffic on your network, and stored quite securely with any name-brand email service!
 
-**HOWEVER**, The credentials you input for WiFi and SMTP are stored away inside the ESP8266's filesystem, which could be read back if your ESP8266 is stolen by a stranger *who just-so-happens to know* how to access the SPIFFS filesystem on this type of microcontroller *and* knows that the credentials are in base64. Highly unlikely, but a possibility. Be safe! Your smartphone being stolen is a much more likely and threatening scenario than this. I highly recommend creating an email account specifically for your ESP8266.
+**HOWEVER**, The credentials you input for WiFi and SMTP are stored away inside the ESP8266's filesystem, which could be read back if your ESP8266 is stolen by a stranger *who just-so-happens to know* how to access the SPIFFS filesystem on this type of microcontroller *and* knows that the credentials are in base64. Highly unlikely, but a possibility. Be safe! Your smartphone being stolen is a much more likely and threatening scenario than this.
+
+**I highly recommend creating an email account specifically for your ESP8266.**
 
 # Free SMS Capability
 
