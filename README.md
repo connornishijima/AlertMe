@@ -32,7 +32,7 @@ No need to worry about reliance on any extra services but your email provider. I
 
 # Free SMS Capability
 
-Most cell carriers are including unlimited text nowadays due to the focus being on data plans, so if you have a smartphone with a data plan, odds are that unlimited texts are already included in the cost! This is done through an Email-to-SMS portal provided by your carrier. For example:
+Most cell carriers are including unlimited text nowadays due to the focus being on data plans, so if you have a smartphone with a data plan, odds are that unlimited texts are already included in the cost! This is done through an Email-to-SMS portal provided by almost every carrier in the world. For example:
 
 | Phone Number | Carrier | SMS Portal                         |
 |--------------|---------|------------------------------------|
@@ -42,7 +42,7 @@ Most cell carriers are including unlimited text nowadays due to the focus being 
 
 These special email addresses forward the mail recieved to the specified phone number!
 
-**A list of over 200 supported worldwide carriers can be found here:**  
+**A list of over 200 supported worldwide carriers can be found at the bottom of this page:**  
 https://martinfitzpatrick.name/list-of-email-to-sms-gateways/
 
 # Email Configuration
