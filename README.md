@@ -37,7 +37,7 @@ With AlertMe, your ESP8266 project can:
 
 This would send an email with your subject line "AlertMe Demo", with the contents you specify, to johndoe@gmail.com! Simple as that.
 
-# Reliablity and Security
+# Reliability and Security
 
 No need to worry about reliance on any extra services but your email provider. If you're pairing this with Gmail, you can pretty well guarantee 100% uptime through them. As far as security goes, the data is sent over HTTPS/SSL to the SMTP server of your choice, which is encrypted as WPA2 traffic on your network, and stored quite securely with any name-brand email service!
 
