@@ -42,7 +42,9 @@ Most cell carriers are including unlimited text nowadays due to the focus being 
 
 These special email addresses forward the mail recieved to the specified phone number!
 
-**A list of over 200 supported worldwide carriers can be found here: https://martinfitzpatrick.name/list-of-email-to-sms-gateways/**
+**A list of over 200 supported worldwide carriers can be found here:
+
+https://martinfitzpatrick.name/list-of-email-to-sms-gateways/**
 
 # Email Configuration
 
