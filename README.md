@@ -40,7 +40,8 @@ Most cell carriers are including unlimited text nowadays due to the focus being 
 | 123-456-7890 | AT&T    | 1234567890@txt.att.net             |
 | 555-555-5555 | Sprint  | 5555555555@messaging.sprintpcs.com |
 
-These special email addresses forward the mail recieved to the specified phone number! A list of over 200 supported worldwide carriers can be found here: https://martinfitzpatrick.name/list-of-email-to-sms-gateways/
+These special email addresses forward the mail recieved to the specified phone number!
+**A list of over 200 supported worldwide carriers can be found here: https://martinfitzpatrick.name/list-of-email-to-sms-gateways/**
 
 # Email Configuration
 
