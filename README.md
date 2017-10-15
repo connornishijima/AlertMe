@@ -15,6 +15,7 @@ With AlertMe, your ESP8266 project can:
 - [Usage](#usage)
 - [Reliability & Security](#reliability-and-security)
 - [Free SMS Capability](#free-sms-capability)
+- [Disclaimer](#disclaimer)
 - [Installation](#installation)
 - [Dependencies](#dependencies)
 - [Email Configuration](#email-configuration)
@@ -56,6 +57,12 @@ These special email addresses forward the mail recieved to the specified phone n
 
 **A list of over 200 supported worldwide carriers can be found at the bottom of this page:**  
 https://martinfitzpatrick.name/list-of-email-to-sms-gateways/
+
+----------
+# Disclaimer
+
+Don't use this for spam. *Don't you do it.*
+**I assume no responsibility for how this is used.**
 
 ----------
 # Installation
