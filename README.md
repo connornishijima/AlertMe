@@ -85,10 +85,10 @@ You'll need these two libraries already installed for AlertMe to work:
 
 To send Email or SMS, you'll need to get SMTP access with your email provider. A quick Google search for "[Provider] SMTP port" will usually get you what you need. There's too many to cover here, so I'll go over Gmail usage:
 
-SMTP Port: 465
-SMTP Server: smtp.gmail.com
-SMTP Email: **your Gmail address**
-SMTP Password **your Gmail password**
+SMTP Port: 465  
+SMTP Server: smtp.gmail.com  
+SMTP Email: **your Gmail address**  
+SMTP Password **your Gmail password**  
 
 **ALMOST DONE!**
 
