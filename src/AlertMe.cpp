@@ -26,7 +26,7 @@ const char PROGMEM b64_alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 char EMAIL_LOGIN[40];
 char EMAIL_PASSWORD[40];
 uint16_t smtp_port = 0;
-char* smtp_server = "";
+char smtp_server[40];
 bool needs_save = false;
 bool alert_debug = false;
 char* last_error = "";
